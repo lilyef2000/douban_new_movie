@@ -83,3 +83,7 @@ NEWSPIDER_MODULE = 'douban_new_movie.spiders'
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+ITEM_PIPELINES={
+    'douban_new_movie.pipelines.DoubanNewMoviePipeline':300,
+}
