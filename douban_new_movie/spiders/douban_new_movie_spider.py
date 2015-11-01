@@ -16,7 +16,7 @@ class DoubanNewMovieSpider(Spider):
         sel=Selector(response)
 
 
-        movie_name=sel.xpath("//div[@class='pl2']/a/text()").extract()
+        movie_name=sel.xpath("//a[@class='nbg']/@title").extract()#//div[@class='pl2']/a/text().
         movie_url=sel.xpath("//div[@class='pl2']/a/@href").extract()
         movie_star=sel.xpath("//div[@class='pl2']/div/span[@class='rating_nums']/text()").extract()
 

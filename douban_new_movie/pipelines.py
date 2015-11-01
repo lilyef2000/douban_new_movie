@@ -19,7 +19,7 @@ class DoubanNewMoviePipeline(object):
     def process_item(self, item, spider):
         line='the new movie list:'+'\n'
 
-        for i in range(len(item['movie_star'])):
+        for i in range(len(item['movie_url'])):
             movie_name={'movie_name':str(item['movie_name'][i]).replace(' ','')}
             movie_star={'movie_star':item['movie_star'][i]}
             movie_url={'movie_url':item['movie_url'][i]}
